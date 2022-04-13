@@ -1,0 +1,24 @@
+﻿@model AppUserVM
+@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    .form-control {
+        margin:auto
+        
+    }
+</style>
+
+@ViewBag.Message
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.TextBoxFor(x => x.AppUser.Email, new { placeholder = "Mail adresinizi giriniz...", @class = "form-control" })
+    </div>
+
+    <div>
+         <div> 
+        <button class="btn btn-danger">Gönder</button>
+        </div>
+    </div>
+}
